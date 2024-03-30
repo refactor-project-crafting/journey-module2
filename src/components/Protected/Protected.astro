@@ -1,0 +1,105 @@
+---
+import { flagsmith } from "src/lib/flagsmith";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { supabase } from "../../lib/supabase";
+
+const { cookies } = Astro;
+
+const accessToken = cookies.get("sb-access-token");
+const refreshToken = cookies.get("sb-refresh-token");
+
+let isLogged = !!accessToken && !!refreshToken;
+let isAuthorized = true;
+
+let publishedProjectNumber = 0;
+
+if (isLogged) {
+  const { error } = await supabase.auth.setSession({
+    refresh_token: refreshToken!.value,
+    access_token: accessToken!.value,
+  });
+
+  if (error) {
+    cookies.delete("sb-access-token", {
+      path: "/",
+    });
+    cookies.delete("sb-refresh-token", {
+      path: "/",
+    });
+    cookies.delete("sb-username", {
+      path: "/",
+    });
+
+    isLogged = false;
+  }
+}
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const projectNumber = currentPath.replace("/project", "");
+
+let username = Astro.cookies.get("sb-username")!;
+
+if (import.meta.env.DEV) {
+  username = {
+    value: "the-refactor-project",
+  } as typeof username;
+}
+
+if (!username) {
+  isAuthorized = false;
+}
+
+if (isAuthorized) {
+  const flags = await flagsmith.getIdentityFlags(username.value);
+  if (!flags.getFeatureValue("project-number")) {
+    isAuthorized = false;
+  } else {
+    publishedProjectNumber = flags.getFeatureValue("project-number");
+
+    if (+projectNumber > +publishedProjectNumber) {
+      isAuthorized = false;
+    }
+  }
+}
+
+console.log("isLogged", isLogged);
+console.log("is authorized? ", isAuthorized);
+---
+
+<BaseLayout
+  isLogged={isLogged}
+  isAuthorized={isAuthorized}
+  publishedProjectNumber={publishedProjectNumber}
+>
+  {
+    isLogged || import.meta.env.DEV ? (
+      isAuthorized ? (
+        <slot />
+      ) : (
+        <>
+          <div class="centered">
+            <img
+              src="/images/gandalf.jpg"
+              alt="Señal de Gandalf diciendo 'You shall not pass'"
+              width="200"
+            />
+            <h2>No puedes pasar</h2>
+            <p>
+              Si ves esto es porque no tienes autorización para ver esta página
+              🤷. Si crees que deberías poder verla, pídele acceso al equipo
+              administrador
+            </p>
+          </div>
+        </>
+      )
+    ) : (
+      <div class="login">
+        <form action="/api/auth/signin" method="post">
+          <button type="submit" class="signin">
+            Inicia sesión con Github
+          </button>
+        </form>
+      </div>
+    )
+  }
+</BaseLayout>

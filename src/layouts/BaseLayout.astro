@@ -1,0 +1,58 @@
+---
+import Header from "@components/Header/Header.astro";
+import Footer from "@components/Footer/Footer.astro";
+import Sidebar from "@components/Sidebar/Sidebar.astro";
+import "@fontsource-variable/roboto-flex";
+import { type LoginProps } from "../types";
+import "../styles/global.css";
+import "./BaseLayout.css";
+
+interface Props extends LoginProps {
+  isAuthorized: boolean;
+  publishedProjectNumber: number;
+}
+
+const { isLogged, isAuthorized, publishedProjectNumber } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>
+      Módulo 2: Inmersión práctica en Desarrollo Web Full Stack - Crafting en
+      Desarrollo Web Profesional
+    </title>
+    <script>
+      if (
+        location.hash &&
+        new URL(location.href).pathname !== new URL(document.referrer).pathname
+      ) {
+        setTimeout(() => {
+          window.scrollBy({
+            top: -100,
+            behavior: "smooth",
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <Header isLogged={isLogged} />
+      <div class="main-block">
+        {
+          ((isLogged && isAuthorized) || import.meta.env.DEV) && (
+            <Sidebar publishedProjectNumber={publishedProjectNumber} />
+          )
+        }
+        <main class="main-content">
+          <slot />
+        </main>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>

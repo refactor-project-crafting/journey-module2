@@ -1,0 +1,96 @@
+---
+import "./Sidebar.css";
+
+interface Props {
+  publishedProjectNumber: number;
+}
+
+const { publishedProjectNumber } = Astro.props;
+
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const currentProjectNumber = +currentPath.split("/")[1].replace("project", "");
+
+const checkSection = (section: string) => {
+  return currentPath.endsWith(section);
+};
+---
+
+<aside class="main-sidebar">
+  <strong>Módulo 2: Inmersión práctica en Desarrollo Web Full Stack</strong>
+  <nav class="main-navigation">
+    {
+      publishedProjectNumber > 0 && (
+        <ul class:list={[{ passed: publishedProjectNumber > 1 }]}>
+          <li>
+            <a
+              href="/project1"
+              class={checkSection("/project1") ? "current" : ""}
+            >
+              Proyecto 1: Text Analyzer
+            </a>
+            <ul class={currentProjectNumber === 1 ? "open" : ""}>
+              <li>
+                <a
+                  href="/project1/requirements"
+                  class={
+                    checkSection("/project1/requirements") ? "current" : ""
+                  }
+                >
+                  Requirements
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project1/tests"
+                  class={checkSection("/project1/tests") ? "current" : ""}
+                >
+                  Tests
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project1/product-backlog"
+                  class={
+                    checkSection("/project1/product-backlog") ? "current" : ""
+                  }
+                >
+                  Product Backlog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project1/sprint-1-backlog"
+                  class={
+                    checkSection("/project1/sprint-1-backlog") ? "current" : ""
+                  }
+                >
+                  Sprint 1 Backlog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project1/sprint-2-backlog"
+                  class={
+                    checkSection("/project1/sprint-2-backlog") ? "current" : ""
+                  }
+                >
+                  Sprint 2 Backlog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project1/troubleshooting"
+                  class={
+                    checkSection("/project1/troubleshooting") ? "current" : ""
+                  }
+                >
+                  Troubleshooting
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
+  </nav>
+</aside>
