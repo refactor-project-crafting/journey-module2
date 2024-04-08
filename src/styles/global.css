@@ -172,3 +172,7 @@ code {
   top: 5px;
   right: 5px;
 }
+
+.centered {
+  text-align: center;
+}

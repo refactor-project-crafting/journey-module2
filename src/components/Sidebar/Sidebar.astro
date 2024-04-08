@@ -92,5 +92,79 @@ const checkSection = (section: string) => {
         </ul>
       )
     }
+    {
+      publishedProjectNumber > 1 && (
+        <ul class:list={[{ passed: publishedProjectNumber > 2 }]}>
+          <li>
+            <a
+              href="/project2"
+              class={checkSection("/project2") ? "current" : ""}
+            >
+              Proyecto 2: Music Oasis
+            </a>
+            <ul class={currentProjectNumber === 2 ? "open" : ""}>
+              <li>
+                <a
+                  href="/project2/requirements"
+                  class={
+                    checkSection("/project2/requirements") ? "current" : ""
+                  }
+                >
+                  Requirements
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project2/user-stories"
+                  class={
+                    checkSection("/project2/user-stories") ? "current" : ""
+                  }
+                >
+                  User Stories
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project2/ui-design"
+                  class={checkSection("/project2/ui-design") ? "current" : ""}
+                >
+                  UI Design
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project2/product-backlog"
+                  class={
+                    checkSection("/project2/product-backlog") ? "current" : ""
+                  }
+                >
+                  Product Backlog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project2/sprint-1-backlog"
+                  class={
+                    checkSection("/project2/sprint-1-backlog") ? "current" : ""
+                  }
+                >
+                  Sprint 1 Backlog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project2/sprint-2-backlog"
+                  class={
+                    checkSection("/project2/sprint-2-backlog") ? "current" : ""
+                  }
+                >
+                  Sprint 2 Backlog
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
   </nav>
 </aside>

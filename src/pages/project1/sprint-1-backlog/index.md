@@ -6,7 +6,7 @@ El objetivo del Sprint 1 es completar todas las funcionalidades de análisis del
 
 ### 1. Calcular total de párrafos
 
-Crear una función que reciba un texto y devuelva el número total de párrafos que contiene. Un párrafo se considera como un conjunto de líneas separadas por un salto de línea.
+Crear una función que reciba un texto y devuelva el número total de párrafos que contiene. Un párrafo se considera como un conjunto de líneas separadas por una línea en blanco.
 
 **Acceptance Criteria:**
 
