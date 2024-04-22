@@ -167,9 +167,9 @@ code {
 }
 
 .passed::after {
-  content: "🏆";
+  content: "✔️";
   position: absolute;
-  top: 5px;
+  top: 9px;
   right: 5px;
 }
 
