@@ -168,6 +168,7 @@ code {
 
 .passed::after {
   content: "✔️";
+  font-size: 0.7rem;
   position: absolute;
   top: 9px;
   right: 5px;
