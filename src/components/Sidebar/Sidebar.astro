@@ -312,5 +312,51 @@ const checkSection = (section: string) => {
         </ul>
       )
     }
+    {
+      publishedProjectNumber > 5 && (
+        <ul class:list={[{ passed: publishedProjectNumber > 6 }]}>
+          <li>
+            <a
+              href="/project6"
+              class={checkSection("/project6") ? "current" : ""}
+            >
+              Proyecto 6: Blog
+            </a>
+            <ul class={currentProjectNumber === 6 ? "open" : ""}>
+              <li>
+                <a
+                  href="/project6/user-stories"
+                  class={
+                    checkSection("/project6/user-stories") ? "current" : ""
+                  }
+                >
+                  User Stories
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project6/requirements"
+                  class={
+                    checkSection("/project6/requirements") ? "current" : ""
+                  }
+                >
+                  Requirements
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/project6/sprint-backlog"
+                  class={
+                    checkSection("/project6/sprint-backlog") ? "current" : ""
+                  }
+                >
+                  Sprint backlog
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      )
+    }
   </nav>
 </aside>
