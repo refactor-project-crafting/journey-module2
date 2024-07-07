@@ -73,24 +73,7 @@ Mostrar el número de palabras cortas en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el número de palabras cortas en la interfaz.
 
-### 9. Calcular número de palabras largas
-
-Crear una función que reciba un texto y una longitud mínima (por defecto, 8), y que devuelva el número total de palabras que contiene el texto que cumplen con la longitud.
-
-**Acceptance Criteria:**
-
-- La función debe devolver 0 si el texto está vacío.
-- La función debe devolver el número correcto de palabras largas si el texto contiene varias palabras que cumplen con la longitud.
-
-### 10. Mostrar número de palabras largas
-
-Mostrar el número de palabras largas en la interfaz de usuario.
-
-**Acceptance Criteria:**
-
-- Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el número de palabras largas en la interfaz.
-
-### 11. Listar palabras
+### 9. Listar palabras
 
 Crear una función que reciba un listado de palabras y las devuelva como un string separado por comas.
 
@@ -99,7 +82,7 @@ Crear una función que reciba un listado de palabras y las devuelva como un stri
 - La función debe devolver una cadena vacía si el listado de palabras está vacío.
 - La función debe devolver las palabras separadas por comas si el listado de palabras contiene varias palabras.
 
-### 12. Mostrar listado de palabras cortas
+### 10. Mostrar listado de palabras cortas
 
 Mostrar el listado de palabras cortas en la interfaz de usuario.
 
@@ -107,15 +90,7 @@ Mostrar el listado de palabras cortas en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el listado de palabras cortas en la interfaz.
 
-### 13. Mostrar listado de palabras largas
-
-Mostrar el listado de palabras largas en la interfaz de usuario.
-
-**Acceptance Criteria:**
-
-- Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el listado de palabras largas en la interfaz.
-
-### 14. Encontrar palíndromos
+### 11. Encontrar palíndromos
 
 Crear una función que reciba un texto y devuelva un listado de las palabras que son palíndromos.
 
@@ -124,7 +99,7 @@ Crear una función que reciba un texto y devuelva un listado de las palabras que
 - La función debe devolver una lista vacía si no hay palíndromos en el texto.
 - La función debe devolver las palabras palíndromas si hay palíndromos en el texto.
 
-### 15. Mostrar palíndromos
+### 12. Mostrar palíndromos
 
 Mostrar el listado de palíndromos en la interfaz de usuario.
 
@@ -132,7 +107,7 @@ Mostrar el listado de palíndromos en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el listado de palíndromos en la interfaz.
 
-### 16. Calcular frecuencia de palabra
+### 13. Calcular frecuencia de palabra
 
 Crear una función que reciba un texto y una palabra, y devuelva el número de veces que aparece la palabra en el texto.
 
@@ -141,7 +116,7 @@ Crear una función que reciba un texto y una palabra, y devuelva el número de v
 - La función debe devolver 0 si la palabra no aparece en el texto.
 - La función debe devolver el número correcto de veces que aparece la palabra si la palabra aparece en el texto.
 
-### 17. Mostrar frecuencia de palabras
+### 14. Mostrar frecuencia de palabras
 
 Mostrar la frecuencia de las tres palabras escogidas por el usuario en la interfaz de usuario.
 
@@ -149,24 +124,7 @@ Mostrar la frecuencia de las tres palabras escogidas por el usuario en la interf
 
 - Cuando el usuario introduce una palabra en el bloque de frecuencias, se debe mostrar el número de veces que aparece la palabra en el texto.
 
-### 18. Obtener palabras aleatorias
-
-Crear una función que reciba un texto y un número de palabras (por defecto 3), y devuelva un listado de palabras aleatorias obtenidas del texto.
-
-**Acceptance Criteria:**
-
-- La función debe devolver una lista vacía si el texto está vacío.
-- La función debe devolver el número correcto de palabras aleatorias si el texto contiene suficientes palabras.
-
-### 19. Mostrar palabras aleatorias
-
-Mostrar el listado de palabras aleatorias en la interfaz de usuario.
-
-**Acceptance Criteria:**
-
-- Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar un listado de 3 palabras aleatorias en la interfaz, separadas por comas.
-
-### 20. Obtener las palabras al revés
+### 15. Obtener las palabras al revés
 
 Crear una función que reciba un texto y devuelva el mismo texto pero con cada palabra escrita al revés.
 
@@ -175,7 +133,7 @@ Crear una función que reciba un texto y devuelva el mismo texto pero con cada p
 - La función debe devolver una cadena vacía si el texto está vacío.
 - La función debe devolver el texto con las palabras al revés si el texto contiene palabras.
 
-### 21. Mostrar palabras al revés
+### 16. Mostrar palabras al revés
 
 Mostrar el texto con las palabras al revés en la interfaz de usuario.
 
@@ -183,7 +141,7 @@ Mostrar el texto con las palabras al revés en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el texto con las palabras al revés en la interfaz.
 
-### 22. Obtener el texto al revés
+### 17. Obtener el texto al revés
 
 Crear una función que reciba un texto y devuelva el mismo texto pero escrito todo al revés.
 
@@ -191,7 +149,7 @@ Crear una función que reciba un texto y devuelva el mismo texto pero escrito to
 
 - La función debe devolver una cadena vacía si el texto está vacío.
 
-### 23. Mostrar texto al revés
+### 18. Mostrar texto al revés
 
 Mostrar el texto al revés en la interfaz de usuario.
 
@@ -199,7 +157,7 @@ Mostrar el texto al revés en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el texto al revés en la interfaz.
 
-### 24. Ocultar palabras prohibidas
+### 19. Ocultar palabras prohibidas
 
 Crear una función que reciba un texto y un listado de palabras prohibidas, y devuelva el mismo texto pero con las palabras prohibidas reemplazadas por asteriscos.
 
@@ -208,7 +166,7 @@ Crear una función que reciba un texto y un listado de palabras prohibidas, y de
 - La función debe devolver una cadena vacía si el texto está vacío.
 - La función debe devolver el texto con las palabras prohibidas reemplazadas por asteriscos si el texto contiene palabras prohibidas.
 
-### 25. Mostrar texto con palabras prohibidas ocultas
+### 20. Mostrar texto con palabras prohibidas ocultas
 
 Mostrar el texto con las palabras prohibidas ocultas en la interfaz de usuario.
 
@@ -216,7 +174,7 @@ Mostrar el texto con las palabras prohibidas ocultas en la interfaz de usuario.
 
 - Cuando el usuario introduce palabras prohibidas separadas por comas, se muestra el texto con las palabras prohibidas reemplazadas por asteriscos en la interfaz.
 
-### 26. Convertir a camel case
+### 21. Convertir a camel case
 
 Crear una función que reciba un texto y devuelva el mismo texto pero escrito en _camel case_.
 
@@ -225,7 +183,7 @@ Crear una función que reciba un texto y devuelva el mismo texto pero escrito en
 - La función debe devolver una cadena vacía si el texto está vacío.
 - La función debe devolver el texto en _camel case_ si el texto contiene palabras.
 
-### 27. Mostrar texto en camel case
+### 22. Mostrar texto en camel case
 
 Mostrar el texto en _camel case_ en la interfaz de usuario.
 
@@ -233,7 +191,7 @@ Mostrar el texto en _camel case_ en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el texto en _camel case_ en la interfaz.
 
-### 28. Convertir a kebab case
+### 23. Convertir a kebab case
 
 Crear una función que reciba un texto y devuelva el mismo texto pero escrito en _kebab case_.
 
@@ -242,7 +200,7 @@ Crear una función que reciba un texto y devuelva el mismo texto pero escrito en
 - La función debe devolver una cadena vacía si el texto está vacío.
 - La función debe devolver el texto en _kebab case_ si el texto contiene palabras.
 
-### 29. Mostrar texto en kebab case
+### 24. Mostrar texto en kebab case
 
 Mostrar el texto en _kebab case_ en la interfaz de usuario.
 
@@ -250,7 +208,7 @@ Mostrar el texto en _kebab case_ en la interfaz de usuario.
 
 - Cuando el usuario introduce un texto y hace clic en el botón de análisis, se debe mostrar el texto en _kebab case_ en la interfaz.
 
-### 30. Convertir a snake case
+### 25. Convertir a snake case
 
 Crear una función que reciba un texto y devuelva el mismo texto pero escrito en _snake case_.
 
@@ -258,7 +216,7 @@ Crear una función que reciba un texto y devuelva el mismo texto pero escrito en
 
 - La función debe devolver una cadena vacía si el texto está vacío.
 
-### 31. Mostrar texto en snake case
+### 26. Mostrar texto en snake case
 
 Mostrar el texto en _snake case_ en la interfaz de usuario.
 
