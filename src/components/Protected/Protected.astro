@@ -50,7 +50,16 @@ if (!username) {
 }
 
 if (isAuthorized) {
-  publishedProjectNumber = 7;
+  const flags = await flagsmith.getIdentityFlags(username.value);
+  if (!flags.getFeatureValue("project-number")) {
+    isAuthorized = false;
+  } else {
+    publishedProjectNumber = flags.getFeatureValue("project-number");
+
+    if (+projectNumber > +publishedProjectNumber) {
+      isAuthorized = false;
+    }
+  }
 }
 
 console.log("isLogged", isLogged);
