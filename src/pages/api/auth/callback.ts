@@ -27,7 +27,7 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
   }
 
   const { data: dbUserData, error: dbUserError } = await supabase
-    .from("users")
+    .from(import.meta.env.USERS_TABLE)
     .select("*")
     .eq("app_id", dbAppsData.id)
     .eq("username", data.user.user_metadata.user_name);

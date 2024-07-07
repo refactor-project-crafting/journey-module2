@@ -10,6 +10,7 @@ interface ImportMetaEnv {
   readonly CALLBACK_URL: string;
   readonly FLAGSMITH_ENVIRONMENT: string;
   readonly APP_NAME: string;
+  readonly USERS_TABLE: string;
 }
 
 interface ImportMeta {
