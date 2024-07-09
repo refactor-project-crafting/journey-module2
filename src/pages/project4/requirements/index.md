@@ -68,4 +68,3 @@ Para poder pasar una tarea a _Done_, se deben cumplir los siguientes criterios:
 - La tarea y sus tests están integrados en la aplicación
 - Todos los tests pasan
 - La tarea ha sido revisada en una PR
-- La tarea ha sido aprobada en una PR por al menos un miembro del equipo

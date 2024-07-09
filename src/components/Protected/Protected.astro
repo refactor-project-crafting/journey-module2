@@ -1,43 +1,18 @@
 ---
 import { flagsmith } from "src/lib/flagsmith";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { supabase } from "../../lib/supabase";
 
 const { cookies } = Astro;
 
-const accessToken = cookies.get("sb-access-token");
-const refreshToken = cookies.get("sb-refresh-token");
+let username = Astro.cookies.get("trp-username");
 
-let isLogged = !!accessToken && !!refreshToken;
+let isLogged = !!username || import.meta.env.DEV;
 let isAuthorized = true;
 
 let publishedProjectNumber = 0;
 
-if (isLogged) {
-  const { error } = await supabase.auth.setSession({
-    refresh_token: refreshToken!.value,
-    access_token: accessToken!.value,
-  });
-
-  if (error) {
-    cookies.delete("sb-access-token", {
-      path: "/",
-    });
-    cookies.delete("sb-refresh-token", {
-      path: "/",
-    });
-    cookies.delete("sb-username", {
-      path: "/",
-    });
-
-    isLogged = false;
-  }
-}
-
 const currentPath = Astro.url.pathname.replace(/\/$/, "");
 const projectNumber = currentPath.replace("/project", "");
-
-let username = Astro.cookies.get("sb-username")!;
 
 if (import.meta.env.DEV) {
   username = {
@@ -50,7 +25,7 @@ if (!username) {
 }
 
 if (isAuthorized) {
-  const flags = await flagsmith.getIdentityFlags(username.value);
+  const flags = await flagsmith.getIdentityFlags(username!.value);
   if (!flags.getFeatureValue("project-number")) {
     isAuthorized = false;
   } else {
@@ -64,6 +39,7 @@ if (isAuthorized) {
 
 console.log("isLogged", isLogged);
 console.log("is authorized? ", isAuthorized);
+console.log("flag: project number ", publishedProjectNumber);
 ---
 
 <BaseLayout
@@ -94,11 +70,12 @@ console.log("is authorized? ", isAuthorized);
       )
     ) : (
       <div class="login">
-        <form action="/api/auth/signin" method="post">
-          <button type="submit" class="signin">
-            Inicia sesión con Github
-          </button>
-        </form>
+        <a
+          href={`https://github.com/login/oauth/authorize?client_id=${import.meta.env.GITHUB_CLIENT_ID}`}
+          class="signin"
+        >
+          Inicia sesión con Github
+        </a>
       </div>
     )
   }

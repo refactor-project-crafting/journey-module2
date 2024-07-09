@@ -29,7 +29,125 @@ Cada disco tiene:
 
 Se debe maquetar la cabecera de la aplicación.
 
-### MO2. Campo de búsqueda en la cabecera
+### MO2. Maquetación del cuerpo central
+
+Se debe maquetar el cuerpo central de la aplicación para que todo lo próximo que se maquete quede en su interior.
+
+### MO3. Maquetación de la lista de discos
+
+Maquetar la lista de discos sin mostrar aún el contenido de las cards. Sólo tienen que verse los huecos (puedes usar un borde para orientarte y luego quitarlo).
+
+### MO4. Maquetación de la portada de un disco
+
+Maquetar una card de disco con la portada de un disco. No hay que mostrar aún el resto de la información.
+
+### MO5. Maquetación del nombre del disco
+
+Maquetar el nombre del disco y artista/banda en la card de disco.
+
+### MO6. Maquetación del tipo de disco
+
+Maquetar el tipo de disco (vinilo o digital) en la card de disco. También el aviso de si tiene descuento o no.
+
+### MO7. Maquetación del precio del disco
+
+Maquetar en la card del disco el precio y los iconos de favorito y carrito.
+
+### MO8. Funciones para crear las cards
+
+En el módulo `ui` crea una función que se llame `renderRecordCard`y que tenga esta firma:
+
+```typescript
+(record: Record, recordCard: HTMLElement): void
+```
+
+Esta función va a recibir un disco y un elemento HTML que será una copia de la card que has maquetado. Por ahora déjala vacía.
+
+Añade al módulo `ui` esta función e invócala en el archivo principal:
+
+```typescript
+const renderRecordsList = (records: Record[]): void => {
+  const recordsList = document.querySelector(".records")!;
+  const dummyRecord = recordsList.querySelector(".record")!;
+  recordsList.innerHTML = "";
+
+  records.forEach((record) => {
+    const newRecordCard = dummyRecord.cloneNode(true) as HTMLElement;
+    renderRecordCard(record, newRecordCard);
+    recordsList.appendChild(newRecordCard);
+  });
+};
+```
+
+Ahora se deberían ver tantas cards como discos haya en el array de datos.
+
+### MO9. Renderizar la portada de un disco
+
+En la función `renderRecordCard` que has creado en el paso anterior, añade el código necesario para que se muestre la portada del disco.
+
+Para acceder al elemento `<img>` de la card, puedes hacerlo así:
+
+```typescript
+const recordCover = recordCard.querySelector(
+  ".clase-de-tu-portada",
+) as HTMLImageElement;
+```
+
+Y para acceder a su `src`, puedes hacerlo así:
+
+```typescript
+recordCover.src = "URL de la portada del disco";
+```
+
+### MO10. Renderizar el nombre del disco y artista/banda
+
+En la función `renderRecordCard`, añade el código necesario para que se muestre el nombre del disco y el nombre del artista/banda.
+
+Para acceder a un elemento a partir de su clase, puedes hacerlo así:
+
+```typescript
+const element = parentElement.querySelector(".clase")!;
+```
+
+Y para cambiar su contenido, puedes hacerlo así:
+
+```typescript
+element.textContent = "Texto que quieres mostrar";
+```
+
+### MO11. Renderizar el precio del disco
+
+Haz que la card que habías maquetado en el HTML muestre siempre precio normal y precio de descuento.
+
+En la función `renderRecordCard`, añade el código necesario para que se muestre el precio del disco. Si no tiene descuento, no debe mostrarse el precio de descuento.
+
+Para eliminar un elemento HTML, puedes hacerlo así:
+
+```typescript
+element.remove();
+```
+
+### MO12. Renderizar si el disco tiene descuento
+
+Haz que la card que habías maquetado en el HTML muestre siempre el cartel de descuento.
+
+En la función `renderRecordCard`, añade el código necesario para que el cartel se oculte si el disco no tiene descuento.
+
+### MO13. Renderizar el tipo de disco
+
+Haz que la card que habías maquetado en el HTML muestre ambos tipos de disco.
+
+En la función `renderRecordCard`, añade el código necesario para que se oculte uno de los dos tipos de disco.
+
+### MO14. Maquetación de los filtros
+
+![Filtros del listado de discos](/images/figma/filtros.png)
+
+Se debe maquetar la barra superior de filtrado por tipo de disco. Se debe crear una clase que marque el filtro activo.
+
+Por ahora no hay que implementar la funcionalidad de filtrado.
+
+### MO15. Campo de búsqueda en la cabecera
 
 ![Campo de búsqueda en la cabecera](/images/figma/search.png)
 
@@ -60,124 +178,6 @@ const listenSearchIcon = (): void => {
 ```
 
 Out of scope: La funcionalidad de búsqueda de discos no hay que implementarla.
-
-### MO3. Maquetación del cuerpo central
-
-Se debe maquetar el cuerpo central de la aplicación para que todo lo próximo que se maquete quede en su interior.
-
-### MO4. Maquetación de los filtros
-
-![Filtros del listado de discos](/images/figma/filtros.png)
-
-Se debe maquetar la barra superior de filtrado por tipo de disco. Se debe crear una clase que marque el filtro activo.
-
-Por ahora no hay que implementar la funcionalidad de filtrado.
-
-### MO5. Maquetación de la lista de discos
-
-Maquetar la lista de discos sin mostrar aún el contenido de las cards. Sólo tienen que verse los huecos (puedes usar un borde para orientarte y luego quitarlo).
-
-### MO6. Maquetación de la portada de un disco
-
-Maquetar una card de disco con la portada de un disco. No hay que mostrar aún el resto de la información.
-
-### MO7. Maquetación del nombre del disco
-
-Maquetar el nombre del disco y artista/banda en la card de disco.
-
-### MO8. Maquetación del tipo de disco
-
-Maquetar el tipo de disco (vinilo o digital) en la card de disco. También el aviso de si tiene descuento o no.
-
-### MO9. Maquetación del precio del disco
-
-Maquetar en la card del disco el precio y los iconos de favorito y carrito.
-
-### MO10. Funciones para crear las cards
-
-En el módulo `ui` crea una función que se llame `renderRecordCard`y que tenga esta firma:
-
-```typescript
-(record: Record, recordCard: HTMLElement): void
-```
-
-Esta función va a recibir un disco y un elemento HTML que será una copia de la card que has maquetado. Por ahora déjala vacía.
-
-Añade al módulo `ui` esta función e invócala en el archivo principal:
-
-```typescript
-const renderRecordsList = (records: Record[]): void => {
-  const recordsList = document.querySelector(".records")!;
-  const dummyRecord = recordsList.querySelector(".record")!;
-  recordsList.innerHTML = "";
-
-  records.forEach((record) => {
-    const newRecordCard = dummyRecord.cloneNode(true) as HTMLElement;
-    renderRecordCard(record, newRecordCard);
-    recordsList.appendChild(newRecordCard);
-  });
-};
-```
-
-Ahora se deberían ver tantas cards como discos haya en el array de datos.
-
-### MO11. Renderizar la portada de un disco
-
-En la función `renderRecordCard` que has creado en el paso anterior, añade el código necesario para que se muestre la portada del disco.
-
-Para acceder al elemento `<img>` de la card, puedes hacerlo así:
-
-```typescript
-const recordCover = recordCard.querySelector(
-  ".clase-de-tu-portada",
-) as HTMLImageElement;
-```
-
-Y para acceder a su `src`, puedes hacerlo así:
-
-```typescript
-recordCover.src = "URL de la portada del disco";
-```
-
-### MO12. Renderizar el nombre del disco y artista/banda
-
-En la función `renderRecordCard`, añade el código necesario para que se muestre el nombre del disco y el nombre del artista/banda.
-
-Para acceder a un elemento a partir de su clase, puedes hacerlo así:
-
-```typescript
-const element = parentElement.querySelector(".clase")!;
-```
-
-Y para cambiar su contenido, puedes hacerlo así:
-
-```typescript
-element.textContent = "Texto que quieres mostrar";
-```
-
-### MO13. Renderizar el precio del disco
-
-Haz que la card que habías maquetado en el HTML muestre siempre precio normal y precio de descuento.
-
-En la función `renderRecordCard`, añade el código necesario para que se muestre el precio del disco. Si no tiene descuento, no debe mostrarse el precio de descuento.
-
-Para eliminar un elemento HTML, puedes hacerlo así:
-
-```typescript
-element.remove();
-```
-
-### MO14. Renderizar si el disco tiene descuento
-
-Haz que la card que habías maquetado en el HTML muestre siempre el cartel de descuento.
-
-En la función `renderRecordCard`, añade el código necesario para que el cartel se oculte si el disco no tiene descuento.
-
-### MO15. Renderizar el tipo de disco
-
-Haz que la card que habías maquetado en el HTML muestre ambos tipos de disco.
-
-En la función `renderRecordCard`, añade el código necesario para que se oculte uno de los dos tipos de disco.
 
 ### MO16. Funcionalidad de filtrado
 
