@@ -17,8 +17,7 @@ La API REST debe tener cuatro endpoints, uno para obtener todos los ítems, otro
 ### Front
 
 - React
-- Estilos con SASS
-- Gestión del estado con Redux
+- Gestión del estado con Zustand
 - Mobile only
 - README con información sobre la app
 - 90% coverage
