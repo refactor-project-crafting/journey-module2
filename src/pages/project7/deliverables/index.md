@@ -10,9 +10,9 @@
 
 Notas:
 
-- Trello: El panel tiene que ser público y llamarse NombreApellidoFinal-202406. **Publica la URL del panel, no del workspace.** Invitar a info@the-refactor-project.com.
-- Figma: El archivo tiene que llamarse NombreApellidoFinal-202406-bcn. **Publica la URL del archivo, no del team.**
-- Netlify / Render: el subdominio tiene que ser nombre-apellido-202406-front y nombre-apellido-202406-back
+- Trello: El panel tiene que ser público y llamarse NombreApellidoFinal-202409. **Publica la URL del panel, no del workspace.** Invitar a info@the-refactor-project.com.
+- Figma: El archivo tiene que llamarse NombreApellidoFinal-202409-bcn. **Publica la URL del archivo, no del team.**
+- Netlify / Render: el subdominio tiene que ser nombre-apellido-202409-front y nombre-apellido-202409-back
 - Todas las tareas del Trello tienen que tener descripción.
 - Los feedbacks de info/error deben mostrar visualmente la diferencia entre info y error.
 - No diseñar diálogos de confirmación.
