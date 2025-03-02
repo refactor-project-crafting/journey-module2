@@ -6,10 +6,12 @@ const { cookies } = Astro;
 
 let username = Astro.cookies.get("trp-username");
 
-let isLogged = !!username || import.meta.env.DEV;
+// let isLogged = !!username || import.meta.env.DEV;
+let isLogged = true;
 let isAuthorized = true;
 
-let publishedProjectNumber = 0;
+// let publishedProjectNumber = 0;
+let publishedProjectNumber = 1;
 
 const currentPath = Astro.url.pathname.replace(/\/$/, "");
 const projectNumber = currentPath.replace("/project", "");
@@ -20,11 +22,11 @@ if (import.meta.env.DEV) {
   } as typeof username;
 }
 
-if (!username) {
+/* if (!username) {
   isAuthorized = false;
-}
+} */
 
-if (isAuthorized) {
+/* if (isAuthorized) {
   const flags = await flagsmith.getIdentityFlags(username!.value);
   if (!flags.getFeatureValue("project-number")) {
     isAuthorized = false;
@@ -35,7 +37,7 @@ if (isAuthorized) {
       isAuthorized = false;
     }
   }
-}
+} */
 
 console.log("Nuluentiendo");
 console.log("isLogged", isLogged);
