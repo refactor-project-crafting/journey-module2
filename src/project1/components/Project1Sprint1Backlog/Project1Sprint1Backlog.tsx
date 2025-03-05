@@ -152,35 +152,6 @@ const Project1Sprint1Backlog: React.FC = () => {
           interfaz.
         </li>
       </ul>
-      <h3 id="11-encontrar-pal-ndromos">11. Encontrar palíndromos</h3>
-      <p>
-        Crear una función que reciba un texto y devuelva un listado de las
-        palabras que son palíndromos.
-      </p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          La función debe devolver una lista vacía si no hay palíndromos en el
-          texto.
-        </li>
-        <li>
-          La función debe devolver las palabras palíndromas si hay palíndromos
-          en el texto.
-        </li>
-      </ul>
-      <h3 id="12-mostrar-pal-ndromos">12. Mostrar palíndromos</h3>
-      <p>Mostrar el listado de palíndromos en la interfaz de usuario.</p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          Cuando el usuario introduce un texto y hace clic en el botón de
-          análisis, se debe mostrar el listado de palíndromos en la interfaz.
-        </li>
-      </ul>
       <h3 id="13-calcular-frecuencia-de-palabra">
         13. Calcular frecuencia de palabra
       </h3>
@@ -247,30 +218,6 @@ const Project1Sprint1Backlog: React.FC = () => {
           Cuando el usuario introduce un texto y hace clic en el botón de
           análisis, se debe mostrar el texto con las palabras al revés en la
           interfaz.
-        </li>
-      </ul>
-      <h3 id="17-obtener-el-texto-al-rev-s">17. Obtener el texto al revés</h3>
-      <p>
-        Crear una función que reciba un texto y devuelva el mismo texto pero
-        escrito todo al revés.
-      </p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          La función debe devolver una cadena vacía si el texto está vacío.
-        </li>
-      </ul>
-      <h3 id="18-mostrar-texto-al-rev-s">18. Mostrar texto al revés</h3>
-      <p>Mostrar el texto al revés en la interfaz de usuario.</p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          Cuando el usuario introduce un texto y hace clic en el botón de
-          análisis, se debe mostrar el texto al revés en la interfaz.
         </li>
       </ul>
       <h3 id="19-ocultar-palabras-prohibidas">
@@ -340,68 +287,6 @@ const Project1Sprint1Backlog: React.FC = () => {
         <li>
           Cuando el usuario introduce un texto y hace clic en el botón de
           análisis, se debe mostrar el texto en <em>camel case</em> en la
-          interfaz.
-        </li>
-      </ul>
-      <h3 id="23-convertir-a-kebab-case">23. Convertir a kebab case</h3>
-      <p>
-        Crear una función que reciba un texto y devuelva el mismo texto pero
-        escrito en <em>kebab case</em>.
-      </p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          La función debe devolver una cadena vacía si el texto está vacío.
-        </li>
-        <li>
-          La función debe devolver el texto en <em>kebab case</em> si el texto
-          contiene palabras.
-        </li>
-      </ul>
-      <h3 id="24-mostrar-texto-en-kebab-case">
-        24. Mostrar texto en kebab case
-      </h3>
-      <p>
-        Mostrar el texto en <em>kebab case</em> en la interfaz de usuario.
-      </p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          Cuando el usuario introduce un texto y hace clic en el botón de
-          análisis, se debe mostrar el texto en <em>kebab case</em> en la
-          interfaz.
-        </li>
-      </ul>
-      <h3 id="25-convertir-a-snake-case">25. Convertir a snake case</h3>
-      <p>
-        Crear una función que reciba un texto y devuelva el mismo texto pero
-        escrito en <em>snake case</em>.
-      </p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          La función debe devolver una cadena vacía si el texto está vacío.
-        </li>
-      </ul>
-      <h3 id="26-mostrar-texto-en-snake-case">
-        26. Mostrar texto en snake case
-      </h3>
-      <p>
-        Mostrar el texto en <em>snake case</em> en la interfaz de usuario.
-      </p>
-      <p>
-        <strong>Acceptance Criteria:</strong>
-      </p>
-      <ul>
-        <li>
-          Cuando el usuario introduce un texto y hace clic en el botón de
-          análisis, se debe mostrar el texto en <em>snake case</em> en la
           interfaz.
         </li>
       </ul>
