@@ -62,6 +62,15 @@ const Project1Sprint2Backlog: React.FC = () => {
         su estado. Cuando esté activo, los colores de la web deben cambiar a un
         tema oscuro.
       </p>
+      <h3>10. Vaciar texto</h3>
+      <p>
+        Coloca el botón "Analyze" a la izquierda y crea un botón a su derecha
+        que contenga el texto "Empty text".
+      </p>
+      <p>
+        Al pulsar este botón se debería vaciar el texto que ha introducido el
+        usuario.
+      </p>
     </>
   );
 };
