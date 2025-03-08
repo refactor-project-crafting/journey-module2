@@ -72,6 +72,20 @@ const Sidebar: React.FC = () => {
             </ul>
           </li>
         </ul>
+        <ul className={`${publishedProjectNumber > 2 ? "passed" : ""}`}>
+          <li>
+            <NavLink end to="/project2/">
+              Proyecto 2: Music Oasis
+            </NavLink>
+            <ul className={currentProjectNumber === 2 ? "open" : ""}>
+              <li>
+                <NavLink end to="/project2/requirements/">
+                  Requirements
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </nav>
     </aside>
   );
