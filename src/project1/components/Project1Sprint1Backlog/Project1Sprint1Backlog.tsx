@@ -152,9 +152,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           interfaz.
         </li>
       </ul>
-      <h3 id="13-calcular-frecuencia-de-palabra">
-        13. Calcular frecuencia de palabra
-      </h3>
+      <h3>11. Calcular frecuencia de palabra</h3>
       <p>
         Crear una función que reciba un texto y una palabra, y devuelva el
         número de veces que aparece la palabra en el texto.
@@ -171,9 +169,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           palabra si la palabra aparece en el texto.
         </li>
       </ul>
-      <h3 id="14-mostrar-frecuencia-de-palabras">
-        14. Mostrar frecuencia de palabras
-      </h3>
+      <h3>12. Mostrar frecuencia de palabras</h3>
       <p>
         Mostrar la frecuencia de las tres palabras escogidas por el usuario en
         la interfaz de usuario.
@@ -187,9 +183,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           se debe mostrar el número de veces que aparece la palabra en el texto.
         </li>
       </ul>
-      <h3 id="15-obtener-las-palabras-al-rev-s">
-        15. Obtener las palabras al revés
-      </h3>
+      <h3>13. Obtener las palabras al revés</h3>
       <p>
         Crear una función que reciba un texto y devuelva el mismo texto pero con
         cada palabra escrita al revés.
@@ -206,7 +200,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           texto contiene palabras.
         </li>
       </ul>
-      <h3 id="16-mostrar-palabras-al-rev-s">16. Mostrar palabras al revés</h3>
+      <h3>14. Mostrar palabras al revés</h3>
       <p>
         Mostrar el texto con las palabras al revés en la interfaz de usuario.
       </p>
@@ -220,9 +214,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           interfaz.
         </li>
       </ul>
-      <h3 id="19-ocultar-palabras-prohibidas">
-        19. Ocultar palabras prohibidas
-      </h3>
+      <h3>15. Ocultar palabras prohibidas</h3>
       <p>
         Crear una función que reciba un texto y un listado de palabras
         prohibidas, y devuelva el mismo texto pero con las palabras prohibidas
@@ -240,9 +232,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           reemplazadas por asteriscos si el texto contiene palabras prohibidas.
         </li>
       </ul>
-      <h3 id="20-mostrar-texto-con-palabras-prohibidas-ocultas">
-        20. Mostrar texto con palabras prohibidas ocultas
-      </h3>
+      <h3>16. Mostrar texto con palabras prohibidas ocultas</h3>
       <p>
         Mostrar el texto con las palabras prohibidas ocultas en la interfaz de
         usuario.
@@ -257,7 +247,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           asteriscos en la interfaz.
         </li>
       </ul>
-      <h3 id="21-convertir-a-camel-case">21. Convertir a camel case</h3>
+      <h3>17. Convertir a camel case</h3>
       <p>
         Crear una función que reciba un texto y devuelva el mismo texto pero
         escrito en <em>camel case</em>.
@@ -274,9 +264,7 @@ const Project1Sprint1Backlog: React.FC = () => {
           contiene palabras.
         </li>
       </ul>
-      <h3 id="22-mostrar-texto-en-camel-case">
-        22. Mostrar texto en camel case
-      </h3>
+      <h3>18. Mostrar texto en camel case</h3>
       <p>
         Mostrar el texto en <em>camel case</em> en la interfaz de usuario.
       </p>

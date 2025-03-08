@@ -71,6 +71,22 @@ const Project1Sprint2Backlog: React.FC = () => {
         Al pulsar este botón se debería vaciar el texto que ha introducido el
         usuario.
       </p>
+      <h3>11. Eliminar recuadros de análisis sobrantes</h3>
+      <p>
+        Elimina de la UI los recuadros de análisis cuyas features se sacaron del
+        backlog.
+      </p>
+      <h3>12. Listado de filtros</h3>
+      <p>
+        Debajo de los dos botones crea un listado de filtros, uno por cada
+        recuadro de análisis que aparece después. Cada filtro debe tener un
+        checkbox.
+      </p>
+      <h3>13. Filtrar</h3>
+      <p>
+        Haz que al marcar y desmarcar un filtro, aparezca y desaparezca el
+        recuadro correspondiente.
+      </p>
     </>
   );
 };

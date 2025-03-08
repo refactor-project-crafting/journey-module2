@@ -72,6 +72,64 @@ const Sidebar: React.FC = () => {
             </ul>
           </li>
         </ul>
+        {publishedProjectNumber >= 2 && (
+          <ul className={`${publishedProjectNumber > 2 ? "passed" : ""}`}>
+            <li>
+              <NavLink end to="/project2/">
+                Proyecto 2: Music Oasis
+              </NavLink>
+              <ul className={currentProjectNumber === 2 ? "open" : ""}>
+                <li>
+                  <NavLink end to="/project2/requirements/">
+                    Requirements
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/project2/user-stories">User Stories</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/project2/ui-design">UI Design</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/project2/product-backlog">
+                    Product Backlog
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/project2/sprint1-backlog">
+                    Sprint 1 Backlog
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/project2/sprint2-backlog">
+                    Sprint 2 Backlog
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        )}
+        {publishedProjectNumber >= 3 && (
+          <ul className={`${publishedProjectNumber > 3 ? "passed" : ""}`}>
+            <li>
+              <NavLink end to="/project3/">
+                Proyecto 3: Minesweeper
+              </NavLink>
+              <ul className={currentProjectNumber === 3 ? "open" : ""}>
+                <li>
+                  <NavLink end to="/project3/user-stories/">
+                    User Stories
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink end to="/project3/product-backlog/">
+                    Product Backlog
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        )}
       </nav>
     </aside>
   );
