@@ -126,6 +126,16 @@ const Sidebar: React.FC = () => {
                     Product Backlog
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink end to="/project3/sprint-1-backlog/">
+                    Sprint 1 Backlog
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink end to="/project3/requirements/">
+                    Requirements
+                  </NavLink>
+                </li>
               </ul>
             </li>
           </ul>
