@@ -197,6 +197,32 @@ const Sidebar: React.FC = () => {
             </li>
           </ul>
         )}
+        {publishedProjectNumber >= 6 && (
+          <ul className={`${publishedProjectNumber > 6 ? "passed" : ""}`}>
+            <li>
+              <NavLink end to="/project6/">
+                Proyecto 6: Pokémon
+              </NavLink>
+              <ul className={currentProjectNumber === 6 ? "open" : ""}>
+                <li>
+                  <NavLink end to="/project6/user-stories/">
+                    User Stories
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink end to="/project6/requirements/">
+                    Requirements
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink end to="/project6/sprint-backlog/">
+                    Sprint Backlog
+                  </NavLink>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        )}
       </nav>
     </aside>
   );
