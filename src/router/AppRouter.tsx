@@ -7,6 +7,7 @@ import Project4Page from "../project4/pages/Project4Page/Project4Page";
 import Project5Page from "../project5/pages/Project5Page/Project5Page";
 import Project6Page from "../project6/pages/Project6Page/Project6Page";
 import Project7Page from "../project7/pages/Project7Page/Project7Page";
+import Project8Page from "../project8/pages/Project8Page/Project8Page";
 
 const AppRouter: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter: React.FC = () => {
         <Route path="project5/:sectionId?" element={<Project5Page />} />
         <Route path="project6/:sectionId?" element={<Project6Page />} />
         <Route path="project7/:sectionId?" element={<Project7Page />} />
+        <Route path="project8/:sectionId?" element={<Project8Page />} />
       </Route>
     </Routes>
   );
